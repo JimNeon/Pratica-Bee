@@ -1,0 +1,50 @@
+using System;
+
+class URI {
+    static void Main(string[] args) {
+        // Lê o valor inteiro total
+        int valorTotal = int.Parse(Console.ReadLine());
+
+        // obrigatório imprimir o valor lido antes de mostrar as notas
+        Console.WriteLine(valorTotal);
+
+        // Criando uma variável que vai sendo atualizada com o "resto" que falta pagar
+        int atual = valorTotal;
+
+        // Notas de 100
+        int notas100 = atual / 100;
+        atual = atual % 100;
+
+        // Notas de 50
+        int notas50 = atual / 50;
+        atual = atual % 50;
+
+        // Notas de 20
+        int notas20 = atual / 20;
+        atual = atual % 20;
+
+        // Notas de 10
+        int notas10 = atual / 10;
+        atual = atual % 10;
+
+        // Notas de 5
+        int notas5 = atual / 5;
+        atual = atual % 5;
+
+        // Notas de 2
+        int notas2 = atual / 2;
+        atual = atual % 2;
+
+        // Notas de 1 (o que sobrou por último são as moedas/notas de 1)
+        int notas1 = atual;
+
+        // Exibe o resultado exatamente no formato exigido pela plataforma
+        Console.WriteLine(notas100 + " nota(s) de R$ 100,00");
+        Console.WriteLine(notas50 + " nota(s) de R$ 50,00");
+        Console.WriteLine(notas20 + " nota(s) de R$ 20,00");
+        Console.WriteLine(notas10 + " nota(s) de R$ 10,00");
+        Console.WriteLine(notas5 + " nota(s) de R$ 5,00");
+        Console.WriteLine(notas2 + " nota(s) de R$ 2,00");
+        Console.WriteLine(notas1 + " nota(s) de R$ 1,00");
+    }
+}
