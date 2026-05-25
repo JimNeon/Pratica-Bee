@@ -1,0 +1,17 @@
+using System;
+
+class URI {
+    static void Main(string[] args) {
+        // Lê a primeira linha, converte para inteiro e guarda em A
+        int A = int.Parse(Console.ReadLine());
+        
+        // Lê a segunda linha, converte para inteiro e guarda em B
+        int B = int.Parse(Console.ReadLine());
+        
+        // Efetua a soma de A e B e armazena na variável X
+        int X = A + B;
+        
+        // Imprime o resultado exatamente como a plataforma exige (com os espaços)
+        Console.WriteLine("X = " + X);
+    }
+}
